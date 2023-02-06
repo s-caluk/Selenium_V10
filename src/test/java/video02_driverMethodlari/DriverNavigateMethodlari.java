@@ -25,7 +25,7 @@ public class DriverNavigateMethodlari {
         // 4- driver.navigate().refresh(); --> icinde oldugu sayfayi yeniler
         driver.navigate().refresh();
 
-        // driver olusturuldugunda acilan sayfayi kapatmak istersek
+        // driver olusturuldugunda acilan sayfayi kapatmak istersek, fark: bu tek tab/window kapatir.
         // driver.close();
 
         // driver calisirken birden fazla tab veya window actiysa tumunu kapatmak icin

@@ -1,5 +1,14 @@
-package video02_driverMethodlari;
 
+
+/*
+bu class da 6 methot gösterilip sonra toptan calistirilacak
+-> su sayfanin kaynak kodlarinda kac defa X kelimesi gecmis , test edin diyebilirler. o zaman 04 kullanilir.
+
+
+ */
+
+
+package video02_driverMethodlari;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

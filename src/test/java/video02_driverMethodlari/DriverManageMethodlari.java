@@ -1,3 +1,8 @@
+
+/*
+driver.manage(). ... dediginde window/timeout/Cookie...ile ilgili islemleri yönetebildigini göreceksin.
+bu derste window ve timeout ile ilgili islemleri manage etmeyi ögrenecegiz.
+ */
 package video02_driverMethodlari;
 
 
@@ -12,6 +17,8 @@ import java.time.Duration;
 public class DriverManageMethodlari {
 
     public static void main(String[] args) {
+
+        //her test classinda bu 4 satiri otomatik yaz. yoksa sorun olusturabilir.
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
@@ -27,8 +34,9 @@ public class DriverManageMethodlari {
         System.out.println(driver.manage().window().getPosition()); // (10, 10)
 
         // 1-C driver.manage().window().setPosition(new Point(15,15));
-        //     icinde oldugu sayfanin sol alt kosesini bizim yazacagimiz pixel noktasina tasir
+        // icinde oldugu sayfanin sol alt kosesini bizim yazacagimiz pixel noktasina tasir
         driver.manage().window().setPosition(new Point(15,15));
+
         // 1-D driver.manage().window().setSize(new Dimension(900,600));
         // icinde oldugu sayfanin sol alt kosesi sabit olarak bizim yazacagimiz olculere getirir
         driver.manage().window().setSize(new Dimension(900,600));
@@ -54,7 +62,6 @@ public class DriverManageMethodlari {
         driver.manage().window().minimize();
 
         // 2- driver.manage().timeouts() methodlari
-
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         /*      wait konusunu ilerde tek basina ele alacagiz
