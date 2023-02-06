@@ -9,8 +9,11 @@ public class IlkClass {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+
         driver.get("https://www.amazon.com");
+        // title kismini ya bir degiskene ataman ya da yazdirman gerekiyor. yazdirmayi tercih ediyor.
         System.out.println(driver.getTitle());
+
         driver.navigate().to("https://www.facebook.com");
         System.out.println(driver.getTitle());
 
