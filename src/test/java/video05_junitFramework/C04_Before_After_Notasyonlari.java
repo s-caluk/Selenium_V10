@@ -1,13 +1,17 @@
+
+/*
+bu yöntemle herhangi bir mehodu calistirdiginda, sistem bakar @before var mi?
+@Before > @Test > @After   sirasi ile calisir!
+ */
+
 package video05_junitFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class C04_Before_After_Notasyonlari {
@@ -26,18 +30,10 @@ public class C04_Before_After_Notasyonlari {
     }
 
     @Test
-    public void test01() {
-        driver.get("https:www.amazon.com");
-    }
+    public void test01() { driver.get("https:www.amazon.com"); }
     @Test
-    public void test02() {
-
-        driver.get("https:www.bestbuy.com");
-    }
+    public void test02() { driver.get("https:www.bestbuy.com"); }
     @Test
-    public void test03() {
-
-        driver.get("https:www.facebook.com");
-    }
+    public void test03() { driver.get("https:www.facebook.com"); }
 
 }

@@ -1,3 +1,10 @@
+
+/*
+bu yöntemle istersem tek bir methodu calistirabilirim
+istersem classin tamamini calistirabilirim. tests passed 3 of 3 !
+her seferinde ayar yaptim , kapattim! ayari bi kere yapip kullansak daha pratik
+ */
+
 package video05_junitFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;

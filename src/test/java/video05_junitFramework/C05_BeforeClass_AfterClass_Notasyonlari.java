@@ -1,3 +1,5 @@
+
+
 package video05_junitFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -9,7 +11,7 @@ import java.time.Duration;
 
 public class C05_BeforeClass_AfterClass_Notasyonlari {
     // Olusturdugumuz test class'inin icindeki test method'lari
-    // hep ayni web sitesi ile ilgili ise her seferinde yeniden driver olusturmaya
+    // "hep ayni web sitesi ile ilgili ise" her seferinde yeniden driver olusturmaya
     // ve her method icin bu driver'i kapatmaya gerek yoktur
     // Class'in basinda bir kere setup calisip, en sonda kapansa olur
     // dersek BeforeClass ve AfterClass kullaniriz
@@ -33,7 +35,7 @@ public class C05_BeforeClass_AfterClass_Notasyonlari {
         // amazon ana sayfaya gidelim
         driver.get("https:www.amazon.com");
     }
-    @Test @Ignore
+    @Test @Ignore                        // ignore yaparsan o method calismadan gecer
     public void test02() {
         // title yazdiralim
         System.out.println(driver.getTitle());
