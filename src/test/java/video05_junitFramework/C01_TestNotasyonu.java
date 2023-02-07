@@ -21,11 +21,14 @@ public class C01_TestNotasyonu {
 
         // 1- https:www.amazon.com sayfasina gidin
         driver.get("https:www.amazon.com");
+
         //2- arama cubuguna “Nutella” yazdirin
         WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella");
+
         //3- Nutella yazdiktan sonra ENTER’a basarak arama islemini yapin
         aramaKutusu.submit();
+
         //4- Bulunan sonuc sayisini yazdirin.
         WebElement sonucYaziElementi=driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         System.out.println(sonucYaziElementi.getText());
