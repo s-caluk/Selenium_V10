@@ -1,3 +1,11 @@
+
+/*
+if - else ile testimiz faild olmasina ragmen sonuc, "test passed" gelir, cünkü kodda bug yok!
+junit bize dogru sonuclama icin , assertion clasi olusturmus(icinde static medotlar var)
+hem if-else ile karsilastirma yapmaya, hem de sout ile raporlama yapmaya gerek birakmiyor.
+
+ */
+
 package video06_JUnitAssertions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -31,11 +39,14 @@ public class C1_IfElseIleAssertion {
     public void test01() {
         // 1- https:www.amazon.com sayfasina gidin
         driver.get("https:www.amazon.com");
+
         //2- arama cubuguna “Nutella” yazdirin
         WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella");
+
         //3- Nutella yazdiktan sonra ENTER’a basarak arama islemini yapin
         aramaKutusu.submit();
+
         //4- Bulunan sonuc yazisinin "Nutella" icerdigini test edelim
         WebElement sonucYaziElementi=driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
 
