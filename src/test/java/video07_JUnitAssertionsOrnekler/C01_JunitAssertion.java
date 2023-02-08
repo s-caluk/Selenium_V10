@@ -1,3 +1,9 @@
+
+/*
+https://automationexercise.com/test_cases  sitesindeki 2 örnegi yapti.
+5.soru
+ */
+
 package video07_JUnitAssertionsOrnekler;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -22,31 +28,41 @@ public class C01_JunitAssertion {
 
     //2. Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
-    //3. Verify that home page is visible successfully
+
+    //3. Verify that home page is visible successfully / Ana sayfanın başarıyla göründüğünü doğrulayın
+        //bunun icin anasayfanin logosunu locat etti, ekranda görünüyor mu diye sorguladi.
         WebElement logoElementi= driver.findElement(By.xpath("//img[@src='/static/images/home/logo.png']"));
-        Assert.assertTrue(logoElementi.isDisplayed());
+        Assert.assertTrue(logoElementi.isDisplayed());  //true-true => passed
+
     //4. Click on 'Signup / Login' button
         WebElement signUpLinki= driver.findElement(By.xpath("//a[text()=' Signup / Login'] "));
         signUpLinki.click();
+
     //5. Verify 'Login to your account' is visible
         WebElement loginYaziElementi= driver.findElement(By.xpath("//h2[text()='Login to your account']"));
         Assert.assertTrue(loginYaziElementi.isDisplayed());
-    //6. Enter correct email address and password
+
+    //6. Enter correct email address and password / zaten olusturulmus hesap üzerinden gidiyoruz.
         WebElement emailAdresKutusu= driver.findElement(By.xpath("//input[@data-qa='login-email']"));
         emailAdresKutusu.sendKeys("ahmet@nehaber.com");
         WebElement passwordKutusu= driver.findElement(By.xpath("//input[@data-qa='login-password']"));
         passwordKutusu.sendKeys("12345");
+
     //7. Click 'login' button
         driver.findElement(By.xpath("//button[@data-qa='login-button']")).click();
+
     //8. Verify that 'Logged in as username' is visible
         WebElement loggedInYazisi= driver.findElement(By.xpath("//a[text()=' Logged in as '] "));
         Assert.assertTrue(loggedInYazisi.isDisplayed());
+
     //9. Click 'Logout' button
         driver.findElement(By.xpath("//a[text()=' Logout'] ")).click();
-    //10. Verify that user is navigated to login page
+
+    //10. Verify that user is navigated to login page / anasayfaya gelmis mi test etmek icin URL´i kullandi.
         String expectedUrl="https://automationexercise.com/login";
         String actualUrl= driver.getCurrentUrl();
         Assert.assertEquals(expectedUrl,actualUrl);
+
     //11. Close driver
         driver.close();
     }
