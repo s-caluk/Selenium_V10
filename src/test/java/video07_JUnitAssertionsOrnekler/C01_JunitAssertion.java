@@ -44,7 +44,7 @@ public class C01_JunitAssertion {
 
     //6. Enter correct email address and password / zaten olusturulmus hesap üzerinden gidiyoruz.
         WebElement emailAdresKutusu= driver.findElement(By.xpath("//input[@data-qa='login-email']"));
-        emailAdresKutusu.sendKeys("ahmet@nehaber.com");
+        emailAdresKutusu.sendKeys("  ");
         WebElement passwordKutusu= driver.findElement(By.xpath("//input[@data-qa='login-password']"));
         passwordKutusu.sendKeys("12345");
 
