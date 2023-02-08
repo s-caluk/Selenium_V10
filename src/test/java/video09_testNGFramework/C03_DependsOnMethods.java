@@ -1,3 +1,9 @@
+
+/*
+bsp: test2 yi calistirdiginda nutella aramasi yapabilmesi icin önce amazona gitmesi lazim.
+fakat amazon baglantisi test1 de. o yüzden dependsOnMethods kullanilir.
+ */
+
 package video09_testNGFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -22,13 +28,13 @@ public class C03_DependsOnMethods {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.amazon.com");
     }
-    @Test(dependsOnMethods ="test01" )
+    @Test(dependsOnMethods ="test01" ) // test2´yi calistirirsin, önce test1 i calistirir cünkü bagimli.
     public void test02(){
         // Nutella aratalim
         WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
     }
-    @Test(dependsOnMethods ="test02" )
+    @Test(dependsOnMethods ="test02" ) // test3 calismasi test2 ye bagli.
     public void test03(){
         // Sonuc yazisinin Nutella icerdigini test edelim
         WebElement sonucYaziElementi= driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));

@@ -1,3 +1,9 @@
+
+/*
+kücük sayidan büyüge öncelik sirasi vardir: -2 -1 0 3 5...
+öncelik sirasi ayni ise isim sirasi baz alinir.
+hic bir sey yazilmamissa priority 0 dir.
+ */
 package video09_testNGFramework;
 
 import org.testng.annotations.Test;

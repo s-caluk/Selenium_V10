@@ -1,3 +1,9 @@
+
+/*
+TestNG de junite kiyasla daha fazla annotation vardir.
+
+ */
+
 package video09_testNGFramework;
 
 import org.testng.annotations.*;
