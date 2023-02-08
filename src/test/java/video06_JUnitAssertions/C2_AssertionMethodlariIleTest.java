@@ -47,7 +47,7 @@ public class C2_AssertionMethodlariIleTest {
         // 1-48 of 105 results for "Nutella"
         String expectedBulunacakKelime="Kutella";
 
-        Assert.assertTrue(actualYaziStr.contains(expectedBulunacakKelime));
+        Assert.assertTrue(actualYaziStr.contains(expectedBulunacakKelime));  //true /false
 
         /*
         int aliYas=56;     Alinin emekli olamayacagini test edin:
